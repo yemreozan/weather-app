@@ -1,8 +1,10 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # phpStrom
-
 .idea/
+
+# sass
+/src/*/*.css
 
 # dependencies
 /node_modules
