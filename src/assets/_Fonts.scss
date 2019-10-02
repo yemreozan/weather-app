@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'WeahterApp';
+  src:  url('fonts/WeahterApp.eot?4o9d9w');
+  src:  url('fonts/WeahterApp.eot?4o9d9w#iefix') format('embedded-opentype'),
+  url('fonts/WeahterApp.ttf?4o9d9w') format('truetype'),
+  url('fonts/WeahterApp.woff?4o9d9w') format('woff'),
+  url('fonts/WeahterApp.svg?4o9d9w#WeahterApp') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="wa-"], [class*=" wa-"] {
+  font-family: 'WeahterApp' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wa-sunny:before {
+  content: "\e900";
+}
+

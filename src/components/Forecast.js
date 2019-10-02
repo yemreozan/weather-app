@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { forecast } from '../services/WeatherService';
 
@@ -16,14 +16,22 @@ function Forecast(props) {
       .catch(error => console.log(error));
   }
 
-  return state && state.map((item ,key) => (
-    <Fragment key={key}>
-      <p><strong>Date</strong> : {new Date(item.dt * 1000).getHours()}:00</p>
-      <p><strong>Temperature</strong> : {item.main.temp}</p>
-      <p><strong>Humidity</strong> : {item.main.humidity}</p>
-      <p><strong>Description</strong> : {item.weather[0].description}</p>
-    </Fragment>
-  ))
+  return (
+    <section id="Forecast">
+      <div className="container">
+        <div className="row">
+          {state && state.map((item ,key) => (
+            <div className="col forecast" key={key}>
+              <p><strong>Date</strong> : {new Date(item.dt * 1000).getHours()}:00</p>
+              <p><strong>Temperature</strong> : {item.main.temp}</p>
+              <p><strong>Humidity</strong> : {item.main.humidity}</p>
+              <p><strong>Description</strong> : {item.weather[0].description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
 }
 
 export default Forecast;

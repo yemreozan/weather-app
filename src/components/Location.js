@@ -14,17 +14,21 @@ function Location({ state, handleClick }) {
   }, []);
 
   return (
-    <div className="form-row">
-      <div className="col-md-5 mt-3">
-        <input type="text" className="form-control" value={city} onChange={e => setCity(e.target.value)}/>
+    <section id="Location">
+      <div className="container">
+        <div className="form-row">
+          <div className="col-md-5 mt-3">
+            <input type="text" className="form-control" value={city} onChange={e => setCity(e.target.value)}/>
+          </div>
+          <div className="col-md-5 mt-3">
+            <input type="text" className="form-control" value={country} onChange={e => setCountry(e.target.value)}/>
+          </div>
+          <div className="col-md-2 mt-3">
+            <button type="button" className="btn btn-block btn-light" onClick={() => handleClick({ city, country })}>Get Statuses</button>
+          </div>
+        </div>
       </div>
-      <div className="col-md-5 mt-3">
-        <input type="text" className="form-control" value={country} onChange={e => setCountry(e.target.value)}/>
-      </div>
-      <div className="col-md-2 mt-3">
-        <button type="button" className="btn btn-block btn-light" onClick={() => handleClick({ city, country })}>Get Statuses</button>
-      </div>
-    </div>
+    </section>
   )
 }
 
